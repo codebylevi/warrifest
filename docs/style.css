@@ -633,14 +633,52 @@ nav ul li:hover {
 .links-inner {
   width: 90%;
   margin: 0 auto;
-  padding: 20px;
+  padding: 50px 20px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 20px;
+  grid-gap: 40px;
+}
+
+.links-inner img {
+  width: 100px;
+  margin-bottom: 10px;
 }
 
 .links-inner a {
+  font-size: 12px;
+  line-height: 2;
   color: #fff;
+}
+
+.links-inner p {
+  font-size: 12px;
+}
+
+.links-inner h3 {
+  border-left: 3px solid #1e4f70;
+  padding-left: 10px;
+  margin-bottom: 10px;
+  font-size: 17px;
+  text-transform: uppercase;
+  font-family: "Playfair Display", serif;
+}
+
+.footer {
+  background-color: #000;
+  border-top: 1px solid #fff;
+  padding: 5px 0;
+}
+
+.footer-inner {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-inner p {
+  font-size: 13px;
+  font-weight: bold;
 }
 
 @media (max-width: 50rem) {
