@@ -607,8 +607,9 @@ nav ul li:hover {
 }
 
 .view-more-events {
-  position: absolute;
-  left: 47%;
+  position: relative;
+  width: 100%;
+  text-align: center;
   color: #a5cfff;
   font-size: 13px;
   transition: color 0.3s ease;
@@ -624,7 +625,7 @@ nav ul li:hover {
 .links {
   background-color: #000;
   color: #fff;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 .links-inner {
@@ -663,7 +664,7 @@ nav ul li:hover {
 .footer {
   background-color: #000;
   border-top: 1px solid #fff;
-  padding: 5px 0;
+  padding: 10px 0;
 }
 
 .footer-inner {
@@ -755,7 +756,7 @@ nav ul li:hover {
   }
   
   .showcase .hero h1 {
-    font-size: 4.5rem;
+    font-size: 4rem;
     margin-bottom: 1rem;
   }
   
@@ -841,7 +842,7 @@ nav ul li:hover {
 }
 
 .about-showcase h2 {
-  font-size: 2rem;
+  font-size: 1.7rem;
   color: #1e4f70;
 }
 
@@ -882,7 +883,7 @@ nav ul li:hover {
 }
 
 .about-inner h3 {
-  font-size: 1.75rem;
+  font-size: 1.2rem;
   font-family: "Playfair Display", serif;
 }
 
@@ -921,7 +922,7 @@ nav ul li:hover {
 }
 
 .bands-showcase h2 {
-  font-size: 2rem;
+  font-size: 1.7rem;
 }
 
 .bands-showcase p {
@@ -946,7 +947,7 @@ nav ul li:hover {
 }
 
 .events-showcase h2 {
-  font-size: 2rem;
+  font-size: 1.7rem;
   color: #1e4f70;
 }
 
