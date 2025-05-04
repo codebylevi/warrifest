@@ -638,7 +638,7 @@ nav ul li:hover {
 }
 
 .links-inner img {
-  width: 100px;
+  width: 7.5rem;
   margin-bottom: 10px;
 }
 
@@ -675,7 +675,7 @@ nav ul li:hover {
 }
 
 .footer-inner p {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: bold;
 }
 
@@ -809,6 +809,10 @@ nav ul li:hover {
   margin-right: 10px;
 }
 
+.events-beta {
+  margin: 50px 0 0 0;
+}
+
 .events-beta-inner {
   display: grid;
   grid-template-columns: 1fr;
@@ -828,6 +832,10 @@ nav ul li:hover {
 
 .events-beta-flex i {
   display: none;
+}
+
+.about {
+  margin-top: 100px;
 }
 
 .about-showcase {
@@ -863,10 +871,7 @@ nav ul li:hover {
 .about-container {
   width: 90%;
   margin: 0 auto;
-}
-
-.about-container {
-  margin-top: 100px
+  margin-top: 50px;
 }
 
 .about-inner {
@@ -936,6 +941,10 @@ nav ul li:hover {
   font-size: 0.7rem;
 }
 
+.bands-list {
+  margin: 50px 0 0 0;
+}
+
 .events-showcase {
   width: 90%;
   height: 100%;
@@ -964,14 +973,39 @@ nav ul li:hover {
 .events-list {
   width: 90%;
   margin: auto;
-  margin-top: 100px;
+  margin-top: 50px;
+}
+
+.events-list > div li {
+  font-size: 13px;
+}
+
+.time {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.links {
+  margin: 100px 0 0 0;
 }
 
 .links-inner {
   width: 90%;
-  margin: 0 auto;
+  margin: auto;
   padding: 50px 20px;
   grid-template-columns: 1fr;
   grid-gap: 40px;
+}
+
+.footer-inner {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-inner p {
+  font-size: 12px;
 }
 }
