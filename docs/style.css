@@ -8,6 +8,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   overflow-x: hidden;
@@ -373,6 +377,28 @@ nav ul li:hover {
   margin-left: 0.3125rem;
 }
 
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 .about-container {
   width: 60%;
   max-width: 90% !important;
@@ -387,21 +413,44 @@ nav ul li:hover {
   align-items: center;
   width: 100%;
   height: 18.75rem;
+  opacity: 0;
+  transform: translateX(100px); /* Default off-screen right */
+}
+
+/* Trigger animation for normal layout */
+.about-inner.visible {
+  animation: slideInFromRight 0.8s ease-out forwards;
 }
 
 .about-inner h3 {
   font-size: 1.75rem;
   font-family: "Playfair Display", serif;
+  font-weight: bold;
 }
 
 .about-inner p {
   margin: 0.625rem 0;
   font-size: 0.8125rem;
+  line-height: 1,6;
 }
 
 .about-inner img {
   width: 25rem;
   height: 18.75rem;
+}
+
+/* When the element is visible, slide the image from right */
+.about-inner.visible img {
+  transform: translateX(0); /* Final position */
+}
+
+.about-inner.reverse {
+  transform: translateX(-100px); /* Off-screen left for reverse */
+}
+
+/* Trigger animation for reversed layout */
+.about-inner.reverse.visible {
+  animation: slideInFromLeft 0.8s ease-out forwards;
 }
 
 .about-inner a {
@@ -601,6 +650,18 @@ nav ul li:hover {
   font-size: 16px;
 }
 
+.event-group {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  will-change: opacity, transform;
+}
+
+.event-group.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .time {
   font-family: "Space Mono", monospace;
   font-weight: 700;
@@ -698,7 +759,7 @@ nav ul li:hover {
   }
 
   .brand .logo {
-    width: 7.5rem;
+    width: 6rem;
   }
 
   nav {

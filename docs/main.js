@@ -50,7 +50,45 @@ if (auto) {
   slideInterval = setInterval(nextSlide, intervalTime);
 }
 
-// MObile Nav
+// About Inner Visibility
+const aboutInnerElements = document.querySelectorAll('.about-inner');
+
+const transit = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    } else {
+      entry.target.classList.remove('visible'); // Remove class when out of view
+    }
+  });
+}, {
+  threshold: 0.1
+});
+
+aboutInnerElements.forEach(el => transit.observe(el));
+
+// Events List
+document.addEventListener("DOMContentLoaded", () => {
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        } else {
+          entry.target.classList.remove("visible");
+        }
+      });
+    },
+    {
+      threshold: 0.1 // 10% visibility before triggering
+    }
+  );
+
+  const eventGroups = document.querySelectorAll(".event-group");
+  eventGroups.forEach(el => observer.observe(el));
+});
+
+// Mobile Nav
 document.querySelector(".mobile-nav").addEventListener("click", () => {
   document.querySelector("nav").classList.toggle("show-nav");
 });
@@ -75,3 +113,28 @@ const observer = new IntersectionObserver(
 document
   .querySelectorAll(".events-beta-flex")
   .forEach((el) => observer.observe(el));
+
+  
+// Smooth Scrolling
+document.addEventListener("DOMContentLoaded", function () {
+  // Get all the nav links
+  const navLinks = document.querySelectorAll(".nav-link");
+
+  // Add click event listener to each nav link
+  navLinks.forEach(link => {
+    link.addEventListener("click", function(e) {
+      e.preventDefault(); // Prevent default link behavior
+
+      // Get the target section's id
+      const targetId = link.textContent.trim().toLowerCase().replace(/ & /g, '-').replace(/ /g, '-');
+      const targetSection = document.getElementById(targetId);
+
+      // Scroll to the target section
+      targetSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    });
+  });
+});
+
