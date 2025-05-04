@@ -781,6 +781,11 @@ nav ul li:hover {
     margin: 0 auto;
   }
 
+  .events-list {
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+  }
 
 }
 
